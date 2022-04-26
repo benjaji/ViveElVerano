@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+html, body {
+    background: #3498DB;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .title-animation {
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    top: 30px;
+    width: 320px;
+  }
+  
+  .shape {
+    fill: transparent;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    stroke: #FFAC1C;
+  }
+  
+  .text {
+    color: #fff;
+    font-family: 'Roboto Condensed';
+    font-size: 22px;
+    letter-spacing: 8px;
+    line-height: 32px;
+    position: relative;
+    top: -48px;
+  }
+  
+  @keyframes draw {
+    0% {
+      stroke-dasharray: 140 540;
+      stroke-dashoffset: -474;
+      stroke-width: 8px;
+    }
+    100% {
+      stroke-dasharray: 760;
+      stroke-dashoffset: 0;
+      stroke-width: 2px;
+    }
+  }
+  
+  .title-animation:hover .shape {
+    -webkit-animation: 0.5s draw linear forwards;
+    animation: 0.5s draw linear forwards;
+  }
+  
+  .content{
+      width: 60%;
+      margin-left: 20%;
+      background-color: white;
+      margin-top: 70px;
+      display: flex;
+      box-sizing: border-box;
+      padding: 15px;
+      transition: transform 2s;
+  }
+  .content:hover{
+    transform: rotate(360deg);
+  }
+  .sun-svg{
+      width: 20%;
+      animation: rotation 10s linear infinite;
+  }
+  .one{
+      fill: #FFAC1C;
+  }
+  .two{
+      fill: #FFAC1C;
+  }
+  .middle{
+    fill: #F28C28;
+    transition: fill 1s;
+  }
+  .middle:hover{
+      fill: #FF5F1F;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .some-text{
+      width: 80%;
+      box-sizing: border-box;
+      padding-left: 20px;
+  }
+  h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: #FF5F1F;
+    margin-top: 40px;
+  }
+  p{
+    font-family: 'Roboto', sans-serif;
+  }
+  .content-two{
+      width: 60%;
+      margin-left: 20%;
+      background-color: #FFAC1C;
+      height: 500px;
+      transition: width 2s, height 2s;
+  }
+  .content-two:hover{
+    width: 80%;
+    margin-left: 10%;
+    height: 550px;
+  }
+  .heat{
+      fill: #fff;
+      transition: width 2s, height 2s;
+      height: 200px;
+      width: 200px;
+  }
+  .heat:hover{
+      width: 300px;
+      height: 300px;
+  }
+  .check{
+    fill: #fff;
+    width: 150px;
+    height: 150px;
+    display: block;
+    animation: mover 3s ease-in 3 alternate forwards;
+  }
+  @keyframes mover {
+    0% { margin-left: 0 }
+    100% { margin-left: 85%; }
+    100% {opacity: 50%;}
+    }
